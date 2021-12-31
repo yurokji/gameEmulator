@@ -3,39 +3,16 @@
 #define CHIP8_H
 
 #include "chip8const.h"
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <iomanip>
+#include <windows.h>
+#include <string>
+#include <cstring>
 #include <random>
 #include<ctime>
 
-
-//struct chip8
-//{
-//	// 메모리
-//	unsigned char memory[CHIP8_MEM_SIZE];
-//	// 범용 8비트 레지스터 16개
-//	unsigned char V[CHIP8_NUM_GENERAL_REGS];
-//	// 임시 레지스터
-//	unsigned short TMP = 0;
-//	// 메모리 주소 레지스터 MAR (16비트)
-//	unsigned short I = 0;
-//	// 딜레이 타이머
-//	unsigned char DT = 0;
-//	// 사운드 타이머
-//	unsigned char ST = 0;
-//	// 프로그램 카운터
-//	unsigned short PC = 0;
-//	// 스택 포인터
-//	unsigned char SP = 0;
-//	// 메모리 스택
-//	unsigned short stack[CHIP8_STACK_LEVELS];
-//	// 키보드
-//	bool keyboard[CHIP8_NUM_KEYS];
-//	// 키보드 맵
-//	char* keymap;
-//	// 디스플레이
-//	bool display_pixels[CHIP8_HEIGHT][CHIP8_WIDTH];
-//
-//
-//};
 
 class Chip8
 {
@@ -45,7 +22,7 @@ public:
 	// 범용 8비트 레지스터 16개
 	unsigned char V[CHIP8_NUM_GENERAL_REGS];
 	// 임시 레지스터
-	unsigned short TMP;
+	unsigned char TMP;
 	// 메모리 주소 레지스터 MAR (16비트)
 	unsigned short I;
 	// 딜레이 타이머
@@ -64,6 +41,9 @@ public:
 	const char* keymap;
 	// 디스플레이
 	bool display_pixels[CHIP8_HEIGHT][CHIP8_WIDTH];
+
+
+
 
 	Chip8()
 	{
@@ -91,6 +71,11 @@ public:
 	bool isKeyPressed(int key);
 	int mapKey(char inputKey);
 	char SDLKeyPressed();
+	std::string decode(unsigned short _code);
+	std::string decodeGeneral(unsigned short _code);
+	std::string decode8000(unsigned short _code);
+	std::string decodeE000(unsigned short _code);
+	std::string decodeF000(unsigned short _code);
 };
 
 

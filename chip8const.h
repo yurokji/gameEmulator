@@ -12,9 +12,18 @@
 #define CHIP8_WRONG -1
 #define CHIP8_SPRITE_SIZE 5
 #define CHIP8_PROGRAMDATA_ADDR 0x200
+#define CHIP8_PLAY_MODE 0
+#define CHIP8_STEP_MODE 1
+#define CHIP8_DISASSEMBLY_MODE 2
+#define CHIP8_IMG_PLAY_BUTTON_PATH "./images/play.png"
+#define CHIP8_IMG_PAUSE_BUTTON_PATH "./images/pause.png"
+#define CHIP8_IMG_STEP_BUTTON_PATH "./images/ff.png"
+
 //chip8 캐릭터 스프라이트
 
 #include <SDL.h>
+#include <SDL_image.h>
+#include <SDL_ttf.h>
 
 const char characterSprites[]
 = {
