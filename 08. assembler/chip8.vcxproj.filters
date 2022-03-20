@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="headers">
+      <UniqueIdentifier>{7bee80a8-3225-4aee-ac18-6d17d312d63c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources">
+      <UniqueIdentifier>{878a21f0-4521-4d07-ad36-b0dc5a4d34e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{42fecd57-568f-442c-854b-fd19b47c446b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rom">
+      <UniqueIdentifier>{9492ccc0-ae07-41fa-8356-86ce280504ad}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="chip8.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="chip8.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="chip8const.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="roms\asdfas.asm">
+      <Filter>rom</Filter>
+    </None>
+    <None Include="roms\pong.asm">
+      <Filter>rom</Filter>
+    </None>
+    <None Include="roms\pong.ch8">
+      <Filter>rom</Filter>
+    </None>
+    <None Include="roms\pong2.asm">
+      <Filter>rom</Filter>
+    </None>
+    <None Include="roms\tetris.ch8">
+      <Filter>rom</Filter>
+    </None>
+    <None Include="roms\trip8.ch8">
+      <Filter>rom</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="pong_machine.txt">
+      <Filter>rom</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
